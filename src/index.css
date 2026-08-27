@@ -3,25 +3,25 @@
 @tailwind utilities;
 
 @layer utilities {
-  /* Glassmorphism & Gold Illumination */
+  /* Glassmorphism & Amber Glow */
   .glass-navy {
-    background: rgba(15, 32, 53, 0.75);
+    background: rgba(15, 34, 56, 0.85);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(197, 160, 89, 0.2);
+    border: 1px solid rgba(217, 130, 30, 0.25);
   }
-  .glass-gold-subtle {
-    background: rgba(197, 160, 89, 0.08);
+  .glass-amber-subtle {
+    background: rgba(217, 130, 30, 0.08);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(197, 160, 89, 0.3);
+    border: 1px solid rgba(217, 130, 30, 0.3);
   }
-  .text-gradient-gold {
-    background: linear-gradient(135deg, #f8dfa5 0%, #c5a059 50%, #9a7a3a 100%);
+  .text-gradient-amber {
+    background: linear-gradient(135deg, #fcd385 0%, #f5a623 50%, #d9821e 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .gold-glow {
-    box-shadow: 0 0 35px rgba(197, 160, 89, 0.25);
+  .amber-glow {
+    box-shadow: 0 0 35px rgba(217, 130, 30, 0.3);
   }
 
   /* Shimmer Button */
@@ -43,7 +43,7 @@
   }
   .card-3d:hover {
     transform: translateY(-6px) rotateX(1.5deg) rotateY(-1.5deg);
-    box-shadow: 0 20px 35px -10px rgba(8, 18, 30, 0.15), 0 0 15px rgba(197, 160, 89, 0.15);
+    box-shadow: 0 20px 35px -10px rgba(8, 23, 38, 0.2), 0 0 15px rgba(217, 130, 30, 0.15);
   }
 }
 
@@ -67,7 +67,7 @@
 .particle {
   position: absolute;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(228, 201, 140, 0.8) 0%, rgba(197, 160, 89, 0) 70%);
+  background: radial-gradient(circle, rgba(245, 166, 35, 0.8) 0%, rgba(217, 130, 30, 0) 70%);
   pointer-events: none;
   animation: floatParticle 6s infinite ease-in-out;
 }
