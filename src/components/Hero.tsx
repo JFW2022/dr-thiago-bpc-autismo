@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeartHandshake, CheckCircle2, Calculator, MessageCircle, Lock, Award, FileCheck, AlertTriangle, XCircle, Scale, ShieldCheck } from 'lucide-react';
+import { CheckCircle2, Calculator, MessageCircle, Lock, Award, FileCheck, XCircle, Scale, ShieldCheck } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
