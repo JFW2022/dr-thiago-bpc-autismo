@@ -20,7 +20,7 @@ export const AboutLawyer: React.FC = () => {
                   <div>
                     <span className="font-heading font-bold text-lg text-white block">Dr. Thiago Andrade</span>
                     <span className="text-xs text-brand-taupeLight font-semibold block mt-0.5">Advogado Trabalhista & Previdenciário</span>
-                    <span className="text-[11px] text-slate-400 mt-2 block">Inscrição na Ordem dos Advogados do Brasil</span>
+                    <span className="text-[11px] text-slate-400 mt-2 block">Rio de Janeiro / Atendimento Nacional</span>
                   </div>
                 </div>
               </div>
@@ -41,7 +41,7 @@ export const AboutLawyer: React.FC = () => {
             </p>
             <div className="pt-4">
               <a
-                href="https://wa.me/558591822489?text=Ol%C3%A1%2C%20Dr.%20Thiago%20Andrade!%20Gostaria%20de%20conversar%20diretamente%20sobre%20o%20caso%20do%20meu%20filho."
+                href="https://wa.me/5521981822004?text=Ol%C3%A1%2C%20Dr.%20Thiago%20Andrade!%20Gostaria%20de%20conversar%20diretamente%20sobre%20o%20caso%20do%20meu%20filho."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-brand-taupe hover:bg-brand-taupeLight text-brand-navyDark font-bold px-6 py-3.5 rounded-xl shadow-lg transition-colors text-sm"

@@ -13,7 +13,7 @@ export const CtaBanner: React.FC = () => {
         </p>
         <div>
           <a
-            href="https://wa.me/558591822489?text=Ol%C3%A1%2C%20Dr.%20Thiago%20Andrade!%20Gostaria%20de%20iniciar%20a%20avalia%C3%A7%C3%A3o%20do%20BPC%20do%20meu%20filho."
+            href="https://wa.me/5521981822004?text=Ol%C3%A1%2C%20Dr.%20Thiago%20Andrade!%20Gostaria%20de%20iniciar%20a%20avalia%C3%A7%C3%A3o%20do%20BPC%20do%20meu%20filho."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 shimmer-btn text-slate-900 font-extrabold text-base px-8 py-4 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300"

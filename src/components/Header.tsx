@@ -25,7 +25,7 @@ export const Header: React.FC = () => {
 
         {/* CTA Button Header */}
         <a
-          href="https://wa.me/558591822489?text=Ol%C3%A1%2C%20Dr.%20Thiago%20Andrade!%20Gostaria%20de%20avaliar%20o%20BPC%2FLOAS%20para%20meu%20filho%20autista."
+          href="https://wa.me/5521981822004?text=Ol%C3%A1%2C%20Dr.%20Thiago%20Andrade!%20Gostaria%20de%20avaliar%20o%20BPC%2FLOAS%20para%20meu%20filho%20autista."
           target="_blank"
           rel="noopener noreferrer"
           className="hidden sm:inline-flex items-center gap-2 bg-brand-whatsapp hover:bg-brand-whatsappHover text-slate-900 font-bold px-5 py-2.5 rounded-full text-sm shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"

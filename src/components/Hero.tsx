@@ -47,7 +47,7 @@ export const Hero: React.FC = () => {
               </div>
               <div className="flex items-center gap-2.5">
                 <CheckCircle2 className="size-5 text-brand-taupe shrink-0" />
-                <span>Atendimento 100% digital em todo o Brasil</span>
+                <span>Atendimento no Rio de Janeiro e em todo o Brasil</span>
               </div>
             </div>
 
@@ -61,7 +61,7 @@ export const Hero: React.FC = () => {
                 <span>Fazer Simulação de Viabilidade</span>
               </a>
               <a
-                href="https://wa.me/558591822489?text=Ol%C3%A1%2C%20Dr.%20Thiago%20Andrade!%20Gostaria%20de%20uma%20avalia%C3%A7%C3%A3o%20urgente%20sobre%20o%20BPC%20do%20meu%20filho%20com%20Autismo."
+                href="https://wa.me/5521981822004?text=Ol%C3%A1%2C%20Dr.%20Thiago%20Andrade!%20Gostaria%20de%20uma%20avalia%C3%A7%C3%A3o%20urgente%20sobre%20o%20BPC%20do%20meu%20filho%20com%20Autismo."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold text-base px-6 py-4 rounded-xl border border-brand-taupe/30 transition-colors"
@@ -112,7 +112,7 @@ export const Hero: React.FC = () => {
               </ul>
 
               <a
-                href="https://wa.me/558591822489?text=Ol%C3%A1%2C%20Dr.%20Thiago%20Andrade!%20O%20INSS%20negou%20meu%20pedido%20de%20BPC%20e%20quero%20reverter%20na%20Justi%C3%A7a."
+                href="https://wa.me/5521981822004?text=Ol%C3%A1%2C%20Dr.%20Thiago%20Andrade!%20O%20INSS%20negou%20meu%20pedido%20de%20BPC%20e%20quero%20reverter%20na%20Justi%C3%A7a."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2 bg-brand-taupe hover:bg-brand-taupeLight text-brand-navyDark font-bold py-3.5 px-4 rounded-xl shadow-lg transition-all text-sm"

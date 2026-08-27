@@ -23,7 +23,7 @@ export const EligibilityQuiz: React.FC = () => {
   };
 
   const getWhatsAppUrl = () => {
-    const phone = '558591822489';
+    const phone = '5521981822004';
     const message = `Olá, Dr. Thiago Andrade! Fiz a simulação no site para BPC/LOAS Autismo:%0A- Laudo: ${encodeURIComponent(answers.step1)}%0A- Situação INSS: ${encodeURIComponent(answers.step2)}%0A- Gastos com Saúde: ${encodeURIComponent(answers.step3)}%0AGostaria de saber como proceder!`;
     return `https://wa.me/${phone}?text=${message}`;
   };
