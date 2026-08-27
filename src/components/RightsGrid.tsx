@@ -54,7 +54,7 @@ export const RightsGrid: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-brand-gold font-bold text-xs sm:text-sm uppercase tracking-widest block mb-2">Fundamentação Jurídica Sólida</span>
+          <span className="text-brand-taupeDark font-bold text-xs sm:text-sm uppercase tracking-widest block mb-2">Fundamentação Jurídica Sólida</span>
           <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl text-brand-navy tracking-tight">
             Direitos Garantidos por Lei para Pessoas com Autismo (TEA)
           </h2>
@@ -68,15 +68,15 @@ export const RightsGrid: React.FC = () => {
           {rights.map((item, index) => {
             const Icon = item.icon;
             return (
-              <article key={index} className="card-3d bg-brand-warmBg p-6 rounded-2xl border border-slate-200 flex flex-col justify-between h-full">
+              <article key={index} className="card-3d bg-brand-warmBg p-6 rounded-2xl border border-slate-200 flex flex-col justify-between h-full hover:border-brand-taupe/50">
                 <div>
-                  <div className="size-12 rounded-xl bg-brand-navy text-brand-gold flex items-center justify-center mb-4">
+                  <div className="size-12 rounded-xl bg-brand-navy text-brand-taupeLight flex items-center justify-center mb-4 shadow-sm">
                     <Icon className="size-6" />
                   </div>
                   <h3 className="font-heading font-bold text-lg text-brand-navy mb-2">{item.title}</h3>
                   <p className="text-sm text-slate-600 leading-relaxed">{item.description}</p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between text-xs font-semibold text-brand-goldDark">
+                <div className="mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between text-xs font-semibold text-brand-taupeDark">
                   <span>{item.badge}</span>
                   <ArrowRight className="size-4" />
                 </div>

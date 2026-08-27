@@ -8,15 +8,18 @@ export default {
     extend: {
       colors: {
         brand: {
-          navy: '#08121e',
-          navyCard: '#0f2035',
-          navyLight: '#18314f',
+          navy: '#252e39',
+          navyDark: '#192028',
+          navyCard: '#2d3744',
+          navyLight: '#394657',
+          taupe: '#b5ab9e',
+          taupeLight: '#d6cec4',
+          taupeDark: '#877f74',
           gold: '#c5a059',
           goldLight: '#e4c98c',
-          goldDark: '#9a7a3a',
           whatsapp: '#25d366',
           whatsappHover: '#1eb857',
-          warmBg: '#fbf9f4',
+          warmBg: '#f8f7f4',
           warmCard: '#ffffff'
         }
       },
