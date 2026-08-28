@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle2, Calculator, MessageCircle, Lock, Award, FileCheck, XCircle, Scale, ShieldCheck } from 'lucide-react';
+import { CheckCircle2, Calculator, XCircle, Scale } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
@@ -27,12 +27,12 @@ export const Hero: React.FC = () => {
 
             {/* Main Headline H1 */}
             <h1 className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-5xl tracking-tight leading-[1.18]">
-              Seu filho tem <span className="text-gradient-amber">Autismo (TEA)</span> e o INSS negou o benefício <span className="text-white underline decoration-brand-amber decoration-4 underline-offset-8">BPC/LOAS?</span>
+              Descubra tudo sobre o <span className="text-gradient-amber">BPC/LOAS</span> para <span className="text-white underline decoration-brand-amber decoration-4 underline-offset-8">Transtorno do Espectro Autista (TEA)</span>
             </h1>
 
             {/* Subtitle */}
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              O escritório <strong>Thiago Andrade Advocacia</strong> atua com dedicação integral perante a Justiça Federal para anular negativas indevidas do INSS. As despesas reais com tratamentos multidisciplinares, medicamentos e terapias são abatidas da renda familiar para garantir <strong>1 salário mínimo todo mês</strong> e o <strong>pagamento de todos os atrasados</strong>.
+              O escritório <strong>Thiago Andrade Advocacia</strong> atua com dedicação integral perante a Justiça Federal para garantir o benefício assistencial. As despesas reais com tratamentos multidisciplinares, medicamentos e terapias são abatidas da renda familiar para garantir <strong>1 salário mínimo todo mês</strong> e o <strong>pagamento de todos os atrasados</strong>.
             </p>
 
             {/* Benefit Checkpoints */}
@@ -55,32 +55,15 @@ export const Hero: React.FC = () => {
               </div>
             </div>
 
-            {/* Hero Actions */}
-            <div className="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            {/* Clean Single CTA Button (No WhatsApp button here for clean aesthetic) */}
+            <div className="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start">
               <a
                 href="#simulador"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 shimmer-btn text-slate-950 font-extrabold text-base px-8 py-4 rounded-xl shadow-xl hover:scale-[1.03] transition-transform duration-300"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 shimmer-btn text-slate-950 font-extrabold text-base px-10 py-4 rounded-xl shadow-xl hover:scale-[1.03] transition-transform duration-300"
               >
                 <Calculator className="size-5" />
                 <span>Simular Viabilidade do BPC</span>
               </a>
-              <a
-                href="https://wa.me/5521981822004?text=Ol%C3%A1%2C%20Dr.%20Thiago%20Andrade!%20Gostaria%20de%20uma%20avalia%C3%A7%C3%A3o%20urgente%20sobre%20o%20BPC%20do%20meu%20filho%20com%20Autismo."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold text-base px-6 py-4 rounded-xl border border-brand-amber/30 transition-colors"
-              >
-                <MessageCircle className="size-5 text-brand-whatsapp" />
-                <span>WhatsApp: (21) 98182-2004</span>
-              </a>
-            </div>
-
-            {/* Badges Bar */}
-            <div className="pt-6 border-t border-brand-amber/20 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-300">
-              <span className="flex items-center gap-1.5"><ShieldCheck className="size-4 text-brand-amber" /> OAB Regularizada</span>
-              <span className="flex items-center gap-1.5"><Lock className="size-4 text-brand-amber" /> Sigilo Total</span>
-              <span className="flex items-center gap-1.5"><Award className="size-4 text-brand-amber" /> Defesa Especializada em TEA</span>
-              <span className="flex items-center gap-1.5"><FileCheck className="size-4 text-brand-amber" /> Avaliação Documental Sem Custo</span>
             </div>
 
           </div>
