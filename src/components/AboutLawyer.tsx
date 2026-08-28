@@ -3,12 +3,12 @@ import { MessageCircle, ShieldCheck, MapPin, Users, Award } from 'lucide-react';
 
 export const AboutLawyer: React.FC = () => {
   return (
-    <section id="sobre" className="py-16 md:py-24 bg-gradient-to-b from-brand-navy via-brand-navyDark to-brand-navy text-white border-t border-brand-amber/20">
+    <section id="sobre" className="py-16 md:py-24 bg-gradient-to-b from-brand-navy via-brand-navyDark to-brand-navy text-white border-t border-brand-amber/20 overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
           
-          {/* Official Seal & Cover Visual Card */}
-          <div className="md:col-span-5 text-center">
+          {/* Official Seal & Cover Visual Card (Enters from Left) */}
+          <div className="md:col-span-5 text-center reveal-left">
             <div className="relative inline-block">
               <div className="rounded-3xl bg-gradient-to-tr from-brand-amber to-brand-navyLight p-1 shadow-2xl mx-auto max-w-sm">
                 <div className="w-full h-full rounded-3xl bg-brand-navyCard flex flex-col items-center justify-center p-8 text-center border border-brand-amber/30 space-y-5">
@@ -46,8 +46,8 @@ export const AboutLawyer: React.FC = () => {
             </div>
           </div>
 
-          {/* Official Bio Content */}
-          <div className="md:col-span-7 space-y-6">
+          {/* Official Bio Content (Enters from Right) */}
+          <div className="md:col-span-7 space-y-6 reveal-right delay-200">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-amber/20 text-brand-amberLight text-xs font-bold uppercase tracking-wider">
               <Award className="size-3.5" />
               Atendimento Humanizado & Responsável

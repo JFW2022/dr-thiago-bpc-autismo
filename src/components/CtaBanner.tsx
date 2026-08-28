@@ -3,8 +3,8 @@ import { MessageCircle } from 'lucide-react';
 
 export const CtaBanner: React.FC = () => {
   return (
-    <section className="py-16 bg-gradient-to-r from-brand-navyDark via-brand-navy to-brand-navyDark text-white text-center border-t border-brand-taupe/20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+    <section className="py-16 bg-gradient-to-r from-brand-navyDark via-brand-navy to-brand-navyDark text-white text-center border-t border-brand-amber/20 overflow-hidden">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 reveal-scale">
         <h2 className="font-heading font-extrabold text-2xl sm:text-3xl md:text-4xl text-white">
           Não aceite a negativa do INSS como a última palavra
         </h2>
@@ -16,10 +16,10 @@ export const CtaBanner: React.FC = () => {
             href="https://wa.me/5521981822004?text=Ol%C3%A1%2C%20Dr.%20Thiago%20Andrade!%20Gostaria%20de%20iniciar%20a%20avalia%C3%A7%C3%A3o%20do%20BPC%20do%20meu%20filho."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 shimmer-btn text-slate-900 font-extrabold text-base px-8 py-4 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300"
+            className="inline-flex items-center gap-3 shimmer-btn text-slate-950 font-extrabold text-base px-8 py-4 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300"
           >
-            <MessageCircle className="size-5 fill-slate-900" />
-            <span>Falar no WhatsApp com o Escritório</span>
+            <MessageCircle className="size-5 fill-slate-950" />
+            <span>Falar no WhatsApp com o Escritório: (21) 98182-2004</span>
           </a>
         </div>
       </div>

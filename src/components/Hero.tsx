@@ -12,8 +12,8 @@ export const Hero: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          {/* Hero Left Content */}
-          <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
+          {/* Hero Left Content (Enters from Left) */}
+          <div className="lg:col-span-7 space-y-6 text-center lg:text-left reveal-left">
             
             {/* Stamp Badge & Tagline */}
             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-brand-navyCard border border-brand-amber/30 text-brand-amberLight text-xs sm:text-sm font-semibold shadow-md">
@@ -85,8 +85,8 @@ export const Hero: React.FC = () => {
 
           </div>
 
-          {/* Hero Right Card */}
-          <div className="lg:col-span-5">
+          {/* Hero Right Card (Enters from Right) */}
+          <div className="lg:col-span-5 reveal-right delay-200">
             <div className="glass-navy p-6 sm:p-8 rounded-2xl border border-brand-amber/30 shadow-2xl relative">
               <div className="absolute -top-3.5 right-6 bg-gradient-to-r from-brand-amber to-brand-amberDark text-slate-950 font-bold text-xs uppercase px-4 py-1 rounded-full shadow-md">
                 Informativo para Mães e Pais
