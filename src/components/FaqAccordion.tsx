@@ -26,7 +26,7 @@ const faqs: FaqItem[] = [
   {
     id: 4,
     question: '4. Preciso pagar algum valor antecipado para iniciar o processo?',
-    answer: 'A análise inicial de viabilidade documental é totalmente sem custo. As condições contratuais são transparentes e formalizadas de acordo com o Código de Ética e Disciplina da OAB.'
+    answer: 'A análise inicial de viabilidade documental é totalmente sem custo. Nossas condições são 100% transparentes e formalizadas com total clareza antes de qualquer início de trabalho.'
   }
 ];
 
@@ -42,7 +42,7 @@ export const FaqAccordion: React.FC = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-12">
-          <span className="text-brand-gold font-bold text-xs sm:text-sm uppercase tracking-widest block mb-2">Esclareça suas Dúvidas</span>
+          <span className="text-brand-amberDark font-bold text-xs sm:text-sm uppercase tracking-widest block mb-2">Esclareça suas Dúvidas</span>
           <h2 className="font-heading font-bold text-2xl sm:text-3xl text-brand-navy">
             Perguntas Frequentes sobre o BPC/LOAS no Autismo
           </h2>
@@ -59,7 +59,7 @@ export const FaqAccordion: React.FC = () => {
                 >
                   <span>{faq.question}</span>
                   <ChevronDown
-                    className={`size-5 text-brand-gold shrink-0 transition-transform duration-300 ${
+                    className={`size-5 text-brand-amber shrink-0 transition-transform duration-300 ${
                       isOpen ? 'rotate-180' : 'rotate-0'
                     }`}
                   />

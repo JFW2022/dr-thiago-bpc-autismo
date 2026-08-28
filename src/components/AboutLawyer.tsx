@@ -66,14 +66,10 @@ export const AboutLawyer: React.FC = () => {
             </p>
 
             {/* Feature Pills */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-sm text-slate-200">
-              <div className="flex items-center gap-2.5">
-                <Users className="size-4 text-brand-amber shrink-0" />
-                <span>Acompanhamento direto pelo WhatsApp</span>
-              </div>
-              <div className="flex items-center gap-2.5">
-                <ShieldCheck className="size-4 text-brand-amber shrink-0" />
-                <span>Conduta pautada no Código de Ética da OAB</span>
+            <div className="pt-2 text-sm text-slate-200">
+              <div className="flex items-center gap-2.5 bg-brand-navyDark/60 p-3 rounded-xl border border-brand-amber/20 max-w-md">
+                <Users className="size-5 text-brand-amber shrink-0" />
+                <span>Acompanhamento direto e personalizado pelo WhatsApp</span>
               </div>
             </div>
 
