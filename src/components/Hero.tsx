@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle2, Calculator, XCircle, Scale } from 'lucide-react';
+import { CheckCircle2, ArrowDown, FileSearch } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
@@ -22,17 +22,17 @@ export const Hero: React.FC = () => {
                 alt="Selo Thiago Andrade"
                 className="size-5 rounded-full object-cover"
               />
-              <span>Atendimento Humanizado & Responsável em Todo o Brasil</span>
+              <span>Atendimento Humanizado & Especializado em BPC/LOAS</span>
             </div>
 
             {/* Main Headline H1 */}
             <h1 className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-5xl tracking-tight leading-[1.18]">
-              Descubra tudo sobre o <span className="text-gradient-amber">BPC/LOAS</span> para <span className="text-white underline decoration-brand-amber decoration-4 underline-offset-8">Transtorno do Espectro Autista (TEA)</span>
+              Seu filho tem <span className="text-gradient-amber">autismo?</span> Veja se ele pode ter direito ao <span className="text-white underline decoration-brand-amber decoration-4 underline-offset-8">BPC/LOAS.</span>
             </h1>
 
             {/* Subtitle */}
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              O escritório <strong>Thiago Andrade Advocacia</strong> atua com dedicação integral perante a Justiça Federal para garantir o benefício assistencial. As despesas reais com tratamentos multidisciplinares, medicamentos e terapias são abatidas da renda familiar para garantir <strong>1 salário mínimo todo mês</strong> e o <strong>pagamento de todos os atrasados</strong>.
+              O BPC pode garantir <strong>um salário mínimo mensal</strong> à pessoa com deficiência que preencha os requisitos. Faça uma avaliação inicial do seu caso.
             </p>
 
             {/* Benefit Checkpoints */}
@@ -51,28 +51,29 @@ export const Hero: React.FC = () => {
               </div>
               <div className="flex items-center gap-2.5 bg-brand-navyCard/60 p-2.5 rounded-lg border border-brand-amber/15">
                 <CheckCircle2 className="size-5 text-brand-amber shrink-0" />
-                <span>Atendimento presencial no RJ e 100% online nacional</span>
+                <span>Atendimento no Rio de Janeiro e em todo o Brasil</span>
               </div>
             </div>
 
-            {/* Clean Single CTA Button (No WhatsApp button here for clean aesthetic) */}
+            {/* Clean Single CTA Button (Leads directly to Quiz/Simulador) */}
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start">
               <a
                 href="#simulador"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 shimmer-btn text-slate-950 font-extrabold text-base px-10 py-4 rounded-xl shadow-xl hover:scale-[1.03] transition-transform duration-300"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 shimmer-btn text-slate-950 font-extrabold text-base px-10 py-4 rounded-xl shadow-xl hover:scale-[1.03] transition-transform duration-300 uppercase tracking-wide"
               >
-                <Calculator className="size-5" />
-                <span>Simular Viabilidade do BPC</span>
+                <FileSearch className="size-5" />
+                <span>VERIFICAR MEU CASO</span>
+                <ArrowDown className="size-4 animate-bounce" />
               </a>
             </div>
 
           </div>
 
-          {/* Hero Right Card (Enters from Right) */}
+          {/* Hero Right Visual Card */}
           <div className="lg:col-span-5 reveal-right delay-200">
             <div className="glass-navy p-6 sm:p-8 rounded-2xl border border-brand-amber/30 shadow-2xl relative">
               <div className="absolute -top-3.5 right-6 bg-gradient-to-r from-brand-amber to-brand-amberDark text-slate-950 font-bold text-xs uppercase px-4 py-1 rounded-full shadow-md">
-                Informativo para Mães e Pais
+                Guia Rápido
               </div>
               
               <div className="flex items-center gap-3 mb-4">
@@ -83,37 +84,34 @@ export const Hero: React.FC = () => {
                 />
                 <div>
                   <h3 className="font-heading font-bold text-base text-white">Thiago Andrade Advocacia</h3>
-                  <span className="text-xs text-brand-amberLight font-medium">Reversão de Negativas do INSS</span>
+                  <span className="text-xs text-brand-amberLight font-medium">Direito Previdenciário & TEA</span>
                 </div>
               </div>
               
               <p className="text-xs sm:text-sm text-slate-300 mb-4 leading-relaxed">
-                O sistema eletrônico do INSS costuma emitir indeferimentos automáticos por alegação de renda ou falta de incapacidade. <strong>Veja como a Justiça restaura o direito:</strong>
+                Entenda os 3 pilares essenciais para solicitar o benefício do BPC/LOAS para o autismo:
               </p>
 
               <ul className="space-y-3 text-xs sm:text-sm text-slate-200 mb-6">
                 <li className="flex items-start gap-2.5 bg-brand-navyDark/40 p-2.5 rounded-lg border border-slate-700">
-                  <XCircle className="size-4 text-rose-400 shrink-0 mt-0.5" />
-                  <div><strong>Superação do critério de renda:</strong> O Juiz desconta todos os gastos com terapias, médicos e remédios.</div>
+                  <CheckCircle2 className="size-4 text-brand-amber shrink-0 mt-0.5" />
+                  <div><strong>1. Diagnóstico Clínico:</strong> Laudos e relatórios médicos atualizados com o CID de TEA.</div>
                 </li>
                 <li className="flex items-start gap-2.5 bg-brand-navyDark/40 p-2.5 rounded-lg border border-slate-700">
-                  <XCircle className="size-4 text-rose-400 shrink-0 mt-0.5" />
-                  <div><strong>Autismo Grau 1:</strong> A Lei Berenice Piana equipara o autista à pessoa com deficiência sem distinção de grau.</div>
+                  <CheckCircle2 className="size-4 text-brand-amber shrink-0 mt-0.5" />
+                  <div><strong>2. Análise de Renda Real:</strong> Consideração e abatimento dos gastos com tratamentos contínuos.</div>
                 </li>
                 <li className="flex items-start gap-2.5 bg-brand-navyDark/40 p-2.5 rounded-lg border border-slate-700">
-                  <CheckCircle2 className="size-4 text-emerald-400 shrink-0 mt-0.5" />
-                  <div><strong>Valores Atrasados:</strong> Pagamento acumulado com juros e correção desde o primeiro requerimento.</div>
+                  <CheckCircle2 className="size-4 text-brand-amber shrink-0 mt-0.5" />
+                  <div><strong>3. Avaliação Documental:</strong> Revisão especializada antes de submeter o pedido.</div>
                 </li>
               </ul>
 
               <a
-                href="https://wa.me/5521981822004?text=Ol%C3%A1%2C%20Dr.%20Thiago%20Andrade!%20O%20INSS%20negou%20meu%20pedido%20de%20BPC%20e%20quero%20reverter%20na%20Justi%C3%A7a."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-brand-amber to-brand-amberDark text-slate-950 font-bold py-3.5 px-4 rounded-xl shadow-lg hover:brightness-110 transition-all text-sm"
+                href="#simulador"
+                className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-brand-amber to-brand-amberDark text-slate-950 font-bold py-3.5 px-4 rounded-xl shadow-lg hover:brightness-110 transition-all text-sm uppercase tracking-wide"
               >
-                <Scale className="size-4" />
-                <span>Reverter Negativa com Dr. Thiago Andrade</span>
+                <span>Fazer Avaliação Inicial Gratuita</span>
               </a>
             </div>
           </div>
