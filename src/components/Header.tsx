@@ -16,12 +16,13 @@ export const Header: React.FC = () => {
         </a>
 
         {/* Desktop Nav Links */}
-        <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-200">
-          <a href="#direitos" className="hover:text-brand-amberLight transition-colors">Direitos no Autismo</a>
+        <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-200">
+          <a href="#direitos" className="hover:text-brand-amberLight transition-colors">Direitos TEA</a>
           <a href="#inss-negou" className="hover:text-brand-amberLight transition-colors font-semibold text-brand-amber">INSS Negou?</a>
           <a href="#simulador" className="hover:text-brand-amberLight transition-colors">Questionário</a>
           <a href="#como-funciona" className="hover:text-brand-amberLight transition-colors">Como Funciona</a>
-          <a href="#sobre" className="hover:text-brand-amberLight transition-colors">Dr. Thiago Andrade</a>
+          <a href="#sobre" className="hover:text-brand-amberLight transition-colors">Dr. Thiago</a>
+          <a href="#depoimentos" className="hover:text-brand-amberLight transition-colors">Depoimentos</a>
           <a href="#faq" className="hover:text-brand-amberLight transition-colors">Dúvidas</a>
         </nav>
 

@@ -7,6 +7,7 @@ import { InssDeniedSection } from './components/InssDeniedSection';
 import { EligibilityQuiz } from './components/EligibilityQuiz';
 import { ProcessTimeline } from './components/ProcessTimeline';
 import { AboutLawyer } from './components/AboutLawyer';
+import { Testimonials } from './components/Testimonials';
 import { FaqAccordion } from './components/FaqAccordion';
 import { CtaBanner } from './components/CtaBanner';
 import { Footer } from './components/Footer';
@@ -27,6 +28,7 @@ export const App: React.FC = () => {
         <EligibilityQuiz />
         <ProcessTimeline />
         <AboutLawyer />
+        <Testimonials />
         <FaqAccordion />
         <CtaBanner />
       </main>
