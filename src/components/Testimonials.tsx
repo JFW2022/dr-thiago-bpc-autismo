@@ -12,8 +12,8 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     name: 'Lívia & Bernardo',
-    context: 'Atendimento e Condução no INSS',
-    quote: 'Gostaria de deixar meu agradecimento pelo excelente trabalho realizado. Desde o primeiro atendimento, fui muito bem recebida, com muita atenção, respeito e profissionalismo. O advogado Thiago demonstrou conhecimento, dedicação e, principalmente, muita paciência para esclarecer todas as minhas dúvidas... Sou muito grata pela forma humana e responsável com que meu caso foi conduzido. Recomendo de olhos fechados!',
+    context: 'Condução e Atendimento no INSS',
+    quote: 'Gostaria de deixar meu agradecimento pelo excelente trabalho realizado. Desde o primeiro atendimento, fui muito bem recebida, com muita atenção, respeito e profissionalismo. O advogado Thiago demonstrou conhecimento, dedicação e, principalmente, muita paciência para esclarecer todas as minhas dúvidas e me orientar durante todo o processo. Isso me passou muita segurança e tranquilidade. Sou muito grata por todo o atendimento e pela forma humana e responsável com que meu caso foi conduzido. Recomendo o trabalho de olhos fechados! Excelente profissional!',
     image: '/depoimento-2.jpg',
     revealClass: 'reveal-left delay-100'
   },
@@ -45,15 +45,15 @@ export const Testimonials: React.FC = () => {
           </p>
         </div>
 
-        {/* Testimonials Grid with Real WhatsApp Screenshots */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-start">
+        {/* Testimonials Grid with Equal Height Cards & Full Screenshots */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
           {testimonials.map((item, index) => (
             <div
               key={index}
-              className={`bg-brand-warmBg rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-lg flex flex-col justify-between hover:border-brand-amber/50 transition-all duration-300 ${item.revealClass}`}
+              className={`bg-brand-warmBg rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-lg flex flex-col justify-between h-full hover:border-brand-amber/50 transition-all duration-300 ${item.revealClass}`}
             >
               {/* Stars & Header */}
-              <div>
+              <div className="flex-none">
                 <div className="flex items-center justify-between gap-2 mb-4">
                   <div className="flex items-center gap-1">
                     {[...Array(5)].map((_, i) => (
@@ -66,34 +66,38 @@ export const Testimonials: React.FC = () => {
                 </div>
 
                 {/* Quote Text */}
-                <p className="text-sm sm:text-base text-slate-700 italic leading-relaxed mb-6 font-medium">
-                  "{item.quote}"
-                </p>
+                <div className="min-h-[140px] flex items-start mb-6">
+                  <p className="text-sm sm:text-base text-slate-700 italic leading-relaxed font-medium">
+                    "{item.quote}"
+                  </p>
+                </div>
               </div>
 
-              {/* Real WhatsApp Screenshot Preview Frame */}
-              <div className="mt-2 pt-6 border-t border-slate-200/80">
-                <div className="mb-4">
-                  <span className="text-xs font-bold uppercase tracking-wider text-slate-500 block mb-1">
+              {/* Real WhatsApp Screenshot (FULL Display without cropping) */}
+              <div className="flex-1 flex flex-col justify-between pt-6 border-t border-slate-200/80">
+                <div className="mb-3">
+                  <span className="text-xs font-bold uppercase tracking-wider text-slate-500 block">
                     Print da Conversa Original:
                   </span>
                 </div>
-                <div className="relative group overflow-hidden rounded-2xl border-2 border-slate-300 shadow-md bg-slate-900 max-h-[380px] flex items-center justify-center">
+
+                {/* Full Screenshot Container */}
+                <div className="relative group overflow-hidden rounded-2xl border-2 border-slate-300 shadow-md bg-slate-950 flex items-center justify-center p-1">
                   <img
                     src={item.image}
-                    alt={`Depoimento WhatsApp - ${item.name}`}
-                    className="w-full h-auto object-cover object-top max-h-[380px] transition-transform duration-500 group-hover:scale-105"
+                    alt={`Depoimento WhatsApp na íntegra - ${item.name}`}
+                    className="w-full h-auto object-contain rounded-xl transition-transform duration-300 group-hover:scale-[1.02]"
+                    loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                    <span className="text-white text-xs font-semibold bg-brand-navy/90 px-3 py-1 rounded-full backdrop-blur-sm">
-                      WhatsApp Oficial
-                    </span>
+                  <div className="absolute top-3 right-3 bg-brand-navy/90 text-white text-[11px] font-semibold px-2.5 py-1 rounded-full border border-brand-amber/40 shadow-sm backdrop-blur-sm pointer-events-none">
+                    WhatsApp Oficial
                   </div>
                 </div>
 
-                <div className="mt-4 flex items-center justify-between text-xs text-slate-500">
-                  <span className="font-bold text-slate-800 text-sm">{item.name}</span>
-                  <span className="flex items-center gap-1">
+                {/* Footer Info */}
+                <div className="mt-5 flex items-center justify-between text-xs text-slate-500 pt-3 border-t border-slate-200/60">
+                  <span className="font-bold text-slate-900 text-sm">{item.name}</span>
+                  <span className="flex items-center gap-1 text-slate-600 font-medium">
                     <ShieldCheck className="size-3.5 text-brand-amber" /> {item.context}
                   </span>
                 </div>
