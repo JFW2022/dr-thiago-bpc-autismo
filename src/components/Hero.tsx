@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle2, ArrowDown, FileSearch, Heart, Sparkles, ShieldCheck } from 'lucide-react';
+import { CheckCircle2, ArrowDown, FileSearch, Heart, Sparkles } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
