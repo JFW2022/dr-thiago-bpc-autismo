@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle2, ArrowDown, FileSearch } from 'lucide-react';
+import { CheckCircle2, ArrowDown, FileSearch, Heart, Sparkles, ShieldCheck } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
@@ -69,50 +69,48 @@ export const Hero: React.FC = () => {
 
           </div>
 
-          {/* Hero Right Visual Card */}
+          {/* Hero Right Visual: Therapy Image with Autism Puzzle (Face protected) */}
           <div className="lg:col-span-5 reveal-right delay-200">
-            <div className="glass-navy p-6 sm:p-8 rounded-2xl border border-brand-amber/30 shadow-2xl relative">
-              <div className="absolute -top-3.5 right-6 bg-gradient-to-r from-brand-amber to-brand-amberDark text-slate-950 font-bold text-xs uppercase px-4 py-1 rounded-full shadow-md">
-                Guia Rápido
-              </div>
+            <div className="relative group">
               
-              <div className="flex items-center gap-3 mb-4">
+              {/* Outer Golden Glow Border */}
+              <div className="absolute -inset-1.5 bg-gradient-to-tr from-brand-amber via-brand-amberLight to-brand-navyLight rounded-3xl blur-md opacity-40 group-hover:opacity-70 transition duration-500" />
+              
+              {/* Main Image Container */}
+              <div className="relative rounded-2xl overflow-hidden border-2 border-brand-amber/40 shadow-2xl bg-brand-navyCard">
                 <img
-                  src="/logo-thiago-andrade-stamp.jpg"
-                  alt="Thiago Andrade Selo"
-                  className="size-12 rounded-full border border-brand-amber/40 shadow-inner"
+                  src="/autismo-terapia.jpg"
+                  alt="Criança com autismo em sessão de terapia com peças de quebra-cabeça e blocos de desenvolvimento"
+                  className="w-full h-[400px] sm:h-[440px] object-cover object-center transform transition duration-700 group-hover:scale-105"
                 />
-                <div>
-                  <h3 className="font-heading font-bold text-base text-white">Thiago Andrade Advocacia</h3>
-                  <span className="text-xs text-brand-amberLight font-medium">Direito Previdenciário & TEA</span>
+
+                {/* Subtle Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-navyDark/90 via-brand-navyDark/20 to-transparent" />
+
+                {/* Top Badge: Proteção & Acolhimento */}
+                <div className="absolute top-4 left-4 inline-flex items-center gap-2 bg-brand-navy/90 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-brand-amber/40 text-brand-amberLight text-xs font-bold shadow-lg">
+                  <Heart className="size-3.5 fill-brand-amber text-brand-amber" />
+                  <span>Acolhimento & Suporte Terapêutico</span>
                 </div>
+
+                {/* Bottom Floating Info Card */}
+                <div className="absolute bottom-4 inset-x-4 glass-navy p-4 rounded-xl border border-brand-amber/30 text-left shadow-lg">
+                  <div className="flex items-center justify-between gap-2 mb-1.5">
+                    <span className="text-xs font-bold text-brand-amberLight flex items-center gap-1.5">
+                      <Sparkles className="size-3.5 text-brand-amber" />
+                      Terapias (ABA, Fono e TO)
+                    </span>
+                    <span className="text-[11px] text-slate-300 font-semibold bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-md border border-emerald-500/30">
+                      Abatimento na Renda
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-200 leading-snug">
+                    Os custos com o desenvolvimento e saúde do seu filho são considerados perante a Justiça para viabilizar o benefício mensal.
+                  </p>
+                </div>
+
               </div>
-              
-              <p className="text-xs sm:text-sm text-slate-300 mb-4 leading-relaxed">
-                Entenda os 3 pilares essenciais para solicitar o benefício do BPC/LOAS para o autismo:
-              </p>
 
-              <ul className="space-y-3 text-xs sm:text-sm text-slate-200 mb-6">
-                <li className="flex items-start gap-2.5 bg-brand-navyDark/40 p-2.5 rounded-lg border border-slate-700">
-                  <CheckCircle2 className="size-4 text-brand-amber shrink-0 mt-0.5" />
-                  <div><strong>1. Diagnóstico Clínico:</strong> Laudos e relatórios médicos atualizados com o CID de TEA.</div>
-                </li>
-                <li className="flex items-start gap-2.5 bg-brand-navyDark/40 p-2.5 rounded-lg border border-slate-700">
-                  <CheckCircle2 className="size-4 text-brand-amber shrink-0 mt-0.5" />
-                  <div><strong>2. Análise de Renda Real:</strong> Consideração e abatimento dos gastos com tratamentos contínuos.</div>
-                </li>
-                <li className="flex items-start gap-2.5 bg-brand-navyDark/40 p-2.5 rounded-lg border border-slate-700">
-                  <CheckCircle2 className="size-4 text-brand-amber shrink-0 mt-0.5" />
-                  <div><strong>3. Avaliação Documental:</strong> Revisão especializada antes de submeter o pedido.</div>
-                </li>
-              </ul>
-
-              <a
-                href="#simulador"
-                className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-brand-amber to-brand-amberDark text-slate-950 font-bold py-3.5 px-4 rounded-xl shadow-lg hover:brightness-110 transition-all text-sm uppercase tracking-wide"
-              >
-                <span>Fazer Avaliação Inicial Gratuita</span>
-              </a>
             </div>
           </div>
 
