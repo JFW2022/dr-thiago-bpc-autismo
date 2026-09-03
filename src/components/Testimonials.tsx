@@ -18,7 +18,6 @@ const testimonials: Testimonial[] = [
     name: 'Marcio Lisboa',
     context: 'Apoio Incansável e Dedicação Integral',
     fullText: [
-      'DEPOIMENTO AO DR. THIAGO',
       'Existem momentos na vida em que descobrimos quem realmente está ao nosso lado. E, para mim, o Dr. Thiago foi uma dessas pessoas.',
       'Em um dos momentos mais difíceis e delicados da minha vida, quando me vi diante de uma situação que jamais imaginei enfrentar, o Dr. Thiago não foi apenas o advogado que me representou. Ele foi a pessoa que esteve mais próxima de mim durante todo esse período, transmitindo segurança, tranquilidade e confiança quando eu mais precisava.',
       'Sua atuação profissional foi simplesmente excepcional. Mesmo com o processo ainda em curso, posso afirmar que sua dedicação e seu trabalho foram fundamentais para resolver aquilo que, naquele momento, representava o maior problema da minha vida.',
@@ -163,12 +162,12 @@ export const Testimonials: React.FC = () => {
               {testimonials.map((item, index) => (
                 <div
                   key={index}
-                  className="w-full md:w-1/2 flex-shrink-0 px-3 sm:px-4"
+                  className="w-full md:w-1/2 flex-shrink-0 px-3 sm:px-4 flex"
                 >
-                  <div className="bg-brand-warmBg rounded-3xl border border-slate-200 p-5 sm:p-6 shadow-lg flex flex-col justify-between h-full hover:border-brand-amber/50 transition-all duration-300">
+                  <div className="bg-brand-warmBg rounded-3xl border border-slate-200 p-5 sm:p-6 shadow-lg flex flex-col justify-between w-full h-full hover:border-brand-amber/50 transition-all duration-300">
                     
                     {/* Stars Header */}
-                    <div className="flex items-center justify-between gap-2 mb-4">
+                    <div className="flex items-center justify-between gap-2 mb-3 flex-none">
                       <div className="flex items-center gap-1">
                         {[...Array(5)].map((_, i) => (
                           <Star key={i} className="size-4 sm:size-5 fill-amber-400 text-amber-400" />
@@ -180,30 +179,40 @@ export const Testimonials: React.FC = () => {
                     </div>
 
                     {/* Content Display: Full Text for Marcio Lisboa OR Full WhatsApp Screenshot */}
-                    <div className="flex-1 flex flex-col justify-center">
+                    <div className="flex-1 flex flex-col my-1">
                       {item.fullText ? (
-                        <div className="rounded-2xl border-2 border-brand-amber/30 bg-white p-5 sm:p-6 shadow-md text-slate-800 text-xs sm:text-sm leading-relaxed overflow-y-auto max-h-[460px] sm:max-h-[500px] space-y-3 font-sans">
-                          <div className="flex items-center gap-2 pb-2 border-b border-slate-200 text-brand-amberDark font-bold uppercase tracking-wider text-xs">
-                            <Quote className="size-4" />
-                            <span>Depoimento em Carta Aberta</span>
+                        <div className="h-full flex-1 flex flex-col justify-between rounded-2xl border border-brand-amber/30 bg-white p-4 sm:p-5 shadow-sm text-slate-800 font-sans">
+                          
+                          {/* Header of the letter */}
+                          <div className="flex items-center justify-between gap-2 pb-2 mb-2 border-b border-slate-200 text-brand-amberDark font-bold uppercase tracking-wider text-[11px] sm:text-xs">
+                            <span className="flex items-center gap-1.5">
+                              <Quote className="size-3.5" />
+                              DEPOIMENTO AO DR. THIAGO
+                            </span>
+                            <span className="text-[10px] text-slate-400 font-normal">
+                              Carta Aberta
+                            </span>
                           </div>
-                          {item.fullText.map((paragraph, pIdx) => (
-                            <p
-                              key={pIdx}
-                              className={
-                                pIdx === 0
-                                  ? 'font-heading font-extrabold text-brand-navy text-sm sm:text-base mb-2'
-                                  : pIdx === item.fullText!.length - 1
-                                  ? 'font-bold text-slate-900 pt-2 border-t border-slate-100'
-                                  : 'text-slate-700 leading-relaxed'
-                              }
-                            >
-                              {paragraph}
-                            </p>
-                          ))}
+
+                          {/* Body Paragraphs filling the space without scroll */}
+                          <div className="flex-1 flex flex-col justify-between space-y-1.5 text-[11px] sm:text-[11.5px] leading-snug sm:leading-relaxed text-slate-700">
+                            {item.fullText.map((paragraph, pIdx) => (
+                              <p
+                                key={pIdx}
+                                className={
+                                  pIdx === item.fullText!.length - 1
+                                    ? 'font-semibold text-slate-900 pt-1 border-t border-slate-100 text-[11.5px] sm:text-xs'
+                                    : ''
+                                }
+                              >
+                                {paragraph}
+                              </p>
+                            ))}
+                          </div>
+
                         </div>
                       ) : (
-                        <div className="relative group overflow-hidden rounded-2xl border-2 border-slate-300 shadow-md bg-slate-950 flex items-center justify-center p-1">
+                        <div className="relative group overflow-hidden rounded-2xl border-2 border-slate-300 shadow-md bg-slate-950 flex items-center justify-center p-1 h-full">
                           <img
                             src={item.image}
                             alt={`Depoimento WhatsApp - ${item.name}`}
@@ -215,10 +224,10 @@ export const Testimonials: React.FC = () => {
                     </div>
 
                     {/* Footer Info */}
-                    <div className="mt-4 flex items-center justify-between text-xs text-slate-500 pt-3 border-t border-slate-200/80">
+                    <div className="mt-3 flex items-center justify-between text-xs text-slate-500 pt-3 border-t border-slate-200/80 flex-none">
                       <span className="font-bold text-slate-900 text-sm">{item.name}</span>
-                      <span className="flex items-center gap-1 text-slate-600 font-medium">
-                        <ShieldCheck className="size-3.5 text-brand-amber" /> {item.context}
+                      <span className="flex items-center gap-1 text-slate-600 font-medium text-[11px] sm:text-xs">
+                        <ShieldCheck className="size-3.5 text-brand-amber shrink-0" /> {item.context}
                       </span>
                     </div>
 
