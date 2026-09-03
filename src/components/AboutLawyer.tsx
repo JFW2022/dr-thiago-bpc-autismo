@@ -19,7 +19,7 @@ export const AboutLawyer: React.FC = () => {
 
         <div className="space-y-16">
 
-          {/* Dr. Thiago Andrade (Homem de Terno Preto) */}
+          {/* Dr. Thiago Andrade (Homem de Terno Preto - Foto à Esquerda, Texto à Direita) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-brand-navyCard/60 p-6 sm:p-10 rounded-3xl border border-brand-amber/30 shadow-2xl reveal-left">
             <div className="lg:col-span-5 text-center">
               <div className="relative inline-block group">
@@ -74,26 +74,11 @@ export const AboutLawyer: React.FC = () => {
             </div>
           </div>
 
-          {/* Dr. Marcelo Igreja (Homem de Terno Azul) */}
+          {/* Dr. Marcelo Igreja (Homem de Terno Azul - Texto à Esquerda, Foto à Direita) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-brand-navyCard/60 p-6 sm:p-10 rounded-3xl border border-brand-amber/30 shadow-2xl reveal-right">
-            <div className="lg:col-span-5 text-center">
-              <div className="relative inline-block group">
-                <div className="absolute -inset-1.5 bg-gradient-to-tr from-brand-amber via-brand-amberLight to-brand-navyLight rounded-3xl blur-md opacity-40 group-hover:opacity-70 transition duration-500" />
-                <div className="relative rounded-2xl overflow-hidden border-2 border-brand-amber/40 shadow-2xl">
-                  <img
-                    src="/dr-marcelo-igreja.jpg"
-                    alt="Dr. Marcelo Igreja - Advogado Associado e Consultor OAB/CE 57.430"
-                    className="w-full h-[380px] sm:h-[420px] object-cover object-top transform transition duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-brand-navyDark/90 via-brand-navyDark/40 to-transparent p-4 text-center">
-                    <span className="text-brand-amberLight font-bold text-sm block">Dr. Marcelo Igreja</span>
-                    <span className="text-xs text-slate-300">Advogado Associado e Consultor</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="lg:col-span-7 space-y-5 text-left">
+            
+            {/* Texto à Esquerda */}
+            <div className="lg:col-span-7 space-y-5 text-left order-2 lg:order-1">
               <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-amber/20 text-brand-amberLight text-xs font-bold uppercase tracking-wider">
                 <ShieldCheck className="size-3.5" />
                 Consultoria Especializada
@@ -132,6 +117,25 @@ export const AboutLawyer: React.FC = () => {
                 </a>
               </div>
             </div>
+
+            {/* Foto à Direita */}
+            <div className="lg:col-span-5 text-center order-1 lg:order-2">
+              <div className="relative inline-block group">
+                <div className="absolute -inset-1.5 bg-gradient-to-tr from-brand-amber via-brand-amberLight to-brand-navyLight rounded-3xl blur-md opacity-40 group-hover:opacity-70 transition duration-500" />
+                <div className="relative rounded-2xl overflow-hidden border-2 border-brand-amber/40 shadow-2xl">
+                  <img
+                    src="/dr-marcelo-igreja.jpg"
+                    alt="Dr. Marcelo Igreja - Advogado Associado e Consultor OAB/CE 57.430"
+                    className="w-full h-[380px] sm:h-[420px] object-cover object-top transform transition duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-brand-navyDark/90 via-brand-navyDark/40 to-transparent p-4 text-center">
+                    <span className="text-brand-amberLight font-bold text-sm block">Dr. Marcelo Igreja</span>
+                    <span className="text-xs text-slate-300">Advogado Associado e Consultor</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
 
         </div>
