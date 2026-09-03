@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Award, CheckCircle2, Scale, ShieldCheck } from 'lucide-react';
+import { CheckCircle2, Scale, ShieldCheck } from 'lucide-react';
 
 export const AboutLawyer: React.FC = () => {
   return (
