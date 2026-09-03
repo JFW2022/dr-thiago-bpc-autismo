@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Star, MessageSquareQuote, ShieldCheck, FileSearch, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Star, MessageSquareQuote, ShieldCheck, FileSearch, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
 interface Testimonial {
   name: string;
   context: string;
-  image: string;
+  image?: string;
+  fullText?: string[];
 }
 
 const testimonials: Testimonial[] = [
@@ -12,6 +13,24 @@ const testimonials: Testimonial[] = [
     name: 'Lívia & Bernardo',
     context: 'Condução e Atendimento no INSS',
     image: '/depoimento-2.jpg'
+  },
+  {
+    name: 'Marcio Lisboa',
+    context: 'Apoio Incansável e Dedicação Integral',
+    fullText: [
+      'DEPOIMENTO AO DR. THIAGO',
+      'Existem momentos na vida em que descobrimos quem realmente está ao nosso lado. E, para mim, o Dr. Thiago foi uma dessas pessoas.',
+      'Em um dos momentos mais difíceis e delicados da minha vida, quando me vi diante de uma situação que jamais imaginei enfrentar, o Dr. Thiago não foi apenas o advogado que me representou. Ele foi a pessoa que esteve mais próxima de mim durante todo esse período, transmitindo segurança, tranquilidade e confiança quando eu mais precisava.',
+      'Sua atuação profissional foi simplesmente excepcional. Mesmo com o processo ainda em curso, posso afirmar que sua dedicação e seu trabalho foram fundamentais para resolver aquilo que, naquele momento, representava o maior problema da minha vida.',
+      'O Dr. Thiago esteve presente de forma incansável. Foi ao Ministério Público, ao cartório, ao fórum e esteve onde fosse necessário, acompanhando cada detalhe, buscando soluções e trabalhando de maneira intensa para que tudo fosse conduzido da melhor forma possível.',
+      'Mais do que competência jurídica, encontrei nele comprometimento, humanidade e lealdade.',
+      'Em nenhum momento senti que estava enfrentando aquela situação sozinho. Eu sabia que havia alguém trabalhando por mim, defendendo meus interesses e, principalmente, acreditando que eu merecia ter minha história analisada com justiça.',
+      'Sua dedicação foi em tempo integral. Não mediu esforços, não se limitou ao horário de trabalho e esteve disponível nos momentos em que mais precisei. Isso, para alguém que está passando por uma situação tão difícil, tem um valor que vai muito além de qualquer contrato profissional.',
+      'Por isso, minha gratidão ao Dr. Thiago é enorme. Posso dizer, com absoluta tranquilidade, que tive ao meu lado um profissional extremamente competente, dedicado e incansável, mas também um ser humano que soube estar presente quando eu mais precisava.',
+      'Dr. Thiago, muito obrigado por tudo o que fez por mim, pela sua dedicação, pela sua disponibilidade e por nunca medir esforços para me ajudar.',
+      'Algumas pessoas simplesmente exercem uma profissão. Outras deixam uma marca na vida daqueles que ajudam. O senhor, sem dúvida alguma, deixou uma marca muito positiva na minha.',
+      'Minha eterna gratidão, respeito e admiração.'
+    ]
   },
   {
     name: 'Anna',
@@ -27,11 +46,6 @@ const testimonials: Testimonial[] = [
     name: 'Marcio Ribeiro',
     context: 'Profissionalismo e Humanidade',
     image: '/depoimento-3.jpg'
-  },
-  {
-    name: 'Marcio Lisboa',
-    context: 'Apoio Incansável e Dedicação Integral',
-    image: '/depoimento-5.jpg'
   },
   {
     name: 'Cliente Atendido',
@@ -75,7 +89,7 @@ export const Testimonials: React.FC = () => {
     if (isPaused) return;
     const interval = setInterval(() => {
       nextSlide();
-    }, 4500);
+    }, 5500);
     return () => clearInterval(interval);
   }, [isPaused, maxIndex]);
 
@@ -165,16 +179,39 @@ export const Testimonials: React.FC = () => {
                       </span>
                     </div>
 
-                    {/* Full WhatsApp Screenshot */}
+                    {/* Content Display: Full Text for Marcio Lisboa OR Full WhatsApp Screenshot */}
                     <div className="flex-1 flex flex-col justify-center">
-                      <div className="relative group overflow-hidden rounded-2xl border-2 border-slate-300 shadow-md bg-slate-950 flex items-center justify-center p-1">
-                        <img
-                          src={item.image}
-                          alt={`Depoimento WhatsApp - ${item.name}`}
-                          className="w-full h-auto object-contain rounded-xl transition-transform duration-300 group-hover:scale-[1.01]"
-                          loading="lazy"
-                        />
-                      </div>
+                      {item.fullText ? (
+                        <div className="rounded-2xl border-2 border-brand-amber/30 bg-white p-5 sm:p-6 shadow-md text-slate-800 text-xs sm:text-sm leading-relaxed overflow-y-auto max-h-[460px] sm:max-h-[500px] space-y-3 font-sans">
+                          <div className="flex items-center gap-2 pb-2 border-b border-slate-200 text-brand-amberDark font-bold uppercase tracking-wider text-xs">
+                            <Quote className="size-4" />
+                            <span>Depoimento em Carta Aberta</span>
+                          </div>
+                          {item.fullText.map((paragraph, pIdx) => (
+                            <p
+                              key={pIdx}
+                              className={
+                                pIdx === 0
+                                  ? 'font-heading font-extrabold text-brand-navy text-sm sm:text-base mb-2'
+                                  : pIdx === item.fullText!.length - 1
+                                  ? 'font-bold text-slate-900 pt-2 border-t border-slate-100'
+                                  : 'text-slate-700 leading-relaxed'
+                              }
+                            >
+                              {paragraph}
+                            </p>
+                          ))}
+                        </div>
+                      ) : (
+                        <div className="relative group overflow-hidden rounded-2xl border-2 border-slate-300 shadow-md bg-slate-950 flex items-center justify-center p-1">
+                          <img
+                            src={item.image}
+                            alt={`Depoimento WhatsApp - ${item.name}`}
+                            className="w-full h-auto object-contain rounded-xl transition-transform duration-300 group-hover:scale-[1.01]"
+                            loading="lazy"
+                          />
+                        </div>
+                      )}
                     </div>
 
                     {/* Footer Info */}

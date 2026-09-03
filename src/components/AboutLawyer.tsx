@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Award, CheckCircle2, Scale } from 'lucide-react';
+import { MapPin, Award, CheckCircle2, Scale, ShieldCheck } from 'lucide-react';
 
 export const AboutLawyer: React.FC = () => {
   return (
@@ -12,107 +12,130 @@ export const AboutLawyer: React.FC = () => {
           <h2 className="font-heading font-extrabold text-2xl sm:text-3xl md:text-4xl text-white tracking-tight">
             Advocacia Especializada & Atendimento Individualizado
           </h2>
+          <p className="text-slate-300 mt-4 text-sm sm:text-base leading-relaxed">
+            Conheça os advogados dedicados a defender os direitos da sua família com rigor técnico, humanidade e transparência.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-          
-          {/* Official Photo & Stamp Visual Card */}
-          <div className="md:col-span-5 text-center reveal-left">
-            <div className="relative inline-block">
-              <div className="rounded-3xl bg-gradient-to-tr from-brand-amber to-brand-navyLight p-1 shadow-2xl mx-auto max-w-sm">
-                <div className="w-full h-full rounded-3xl bg-brand-navyCard flex flex-col items-center justify-center p-8 text-center border border-brand-amber/30 space-y-5">
-                  <div className="relative">
-                    <img
-                      src="/logo-thiago-andrade-stamp.jpg"
-                      alt="Dr. Thiago Andrade - Advogado OAB RJ 260.276"
-                      className="size-40 sm:size-48 rounded-full object-cover shadow-2xl border-4 border-brand-amber"
-                    />
-                    <div className="absolute bottom-0 right-0 bg-brand-amber text-slate-950 p-2.5 rounded-full shadow-lg">
-                      <Scale className="size-5" />
-                    </div>
-                  </div>
+        <div className="space-y-16">
 
-                  <div>
-                    <h3 className="font-heading font-extrabold text-2xl text-white">Dr. Thiago Andrade</h3>
-                    <div className="inline-block mt-1 bg-brand-amber/20 text-brand-amberLight text-xs font-bold px-3 py-1 rounded-full border border-brand-amber/40">
-                      Advogado – OAB/RJ 260.276
-                    </div>
-                    <span className="flex items-center justify-center gap-1.5 text-xs text-slate-300 mt-2.5">
-                      <MapPin className="size-3.5 text-brand-amber" /> Rio de Janeiro - RJ
-                    </span>
+          {/* Dr. Thiago Andrade (Homem de Terno Preto) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-brand-navyCard/60 p-6 sm:p-10 rounded-3xl border border-brand-amber/30 shadow-2xl reveal-left">
+            <div className="lg:col-span-5 text-center">
+              <div className="relative inline-block group">
+                <div className="absolute -inset-1.5 bg-gradient-to-tr from-brand-amber via-brand-amberLight to-brand-navyLight rounded-3xl blur-md opacity-40 group-hover:opacity-70 transition duration-500" />
+                <div className="relative rounded-2xl overflow-hidden border-2 border-brand-amber/40 shadow-2xl">
+                  <img
+                    src="/dr-thiago-andrade.jpg"
+                    alt="Dr. Thiago Andrade - Advogado Fundador OAB/RJ 260.276"
+                    className="w-full h-[380px] sm:h-[420px] object-cover object-top transform transition duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-brand-navyDark/90 via-brand-navyDark/40 to-transparent p-4 text-center">
+                    <span className="text-brand-amberLight font-bold text-sm block">Dr. Thiago Andrade</span>
+                    <span className="text-xs text-slate-300">Advogado Fundador</span>
                   </div>
+                </div>
+              </div>
+            </div>
 
-                  {/* Trust Pillars */}
-                  <div className="grid grid-cols-2 gap-3 w-full pt-4 border-t border-slate-700/80 text-left text-xs">
-                    <div className="bg-brand-navyDark/70 p-3 rounded-xl border border-slate-800">
-                      <span className="text-brand-amber font-bold block text-sm">Individualizado</span>
-                      <span className="text-slate-400">Atendimento Direto</span>
-                    </div>
-                    <div className="bg-brand-navyDark/70 p-3 rounded-xl border border-slate-800">
-                      <span className="text-brand-amber font-bold block text-sm">Todo o Brasil</span>
-                      <span className="text-slate-400">Suporte Digital</span>
-                    </div>
-                  </div>
+            <div className="lg:col-span-7 space-y-5 text-left">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-amber/20 text-brand-amberLight text-xs font-bold uppercase tracking-wider">
+                <Scale className="size-3.5" />
+                Advogado Titular
+              </div>
+
+              <div>
+                <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-white">
+                  Dr. Thiago Andrade
+                </h3>
+                <div className="inline-block mt-1 bg-brand-amber/20 text-brand-amberLight text-xs font-bold px-3 py-1 rounded-full border border-brand-amber/40">
+                  Advogado – OAB/RJ 260.276
+                </div>
+              </div>
+
+              <p className="text-slate-200 text-base leading-relaxed font-medium">
+                Atuação em Direito Previdenciário, com atendimento individualizado para análise de BPC/LOAS e outros benefícios.
+              </p>
+
+              <p className="text-slate-300 text-sm leading-relaxed">
+                O escritório <strong>Thiago Andrade Advocacia</strong> conduz cada caso com rigor técnico e sensibilidade humana, analisando criteriosamente relatórios médicos, laudos terapêuticos e comprovantes de despesas para estruturar pedidos sólidos perante o INSS e a Justiça Federal.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs text-slate-200">
+                <div className="flex items-center gap-2 bg-brand-navyDark/60 p-2.5 rounded-lg border border-slate-700">
+                  <CheckCircle2 className="size-4 text-brand-amber shrink-0" />
+                  <span>Atendimento Individualizado e Direto</span>
+                </div>
+                <div className="flex items-center gap-2 bg-brand-navyDark/60 p-2.5 rounded-lg border border-slate-700">
+                  <CheckCircle2 className="size-4 text-brand-amber shrink-0" />
+                  <span>Sede no RJ e Atuação em Todo o Brasil</span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Official Bio & Social Proof Content */}
-          <div className="md:col-span-7 space-y-6 reveal-right delay-200">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-amber/20 text-brand-amberLight text-xs font-bold uppercase tracking-wider">
-              <Award className="size-3.5" />
-              Experiência & Credibilidade
-            </div>
-
-            <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-white leading-tight">
-              Dr. Thiago Andrade
-              <span className="block text-lg sm:text-xl font-normal text-brand-amberLight mt-1">
-                Advogado – OAB/RJ 260.276
-              </span>
-            </h2>
-
-            <p className="text-slate-200 text-base sm:text-lg leading-relaxed font-medium">
-              Atuação em Direito Previdenciário, com atendimento individualizado para análise de BPC/LOAS e outros benefícios.
-            </p>
-
-            <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              O escritório <strong>Thiago Andrade Advocacia</strong> conduz cada caso com rigor técnico e sensibilidade humana, analisando criteriosamente relatórios médicos, laudos terapêuticos e comprovantes de despesas para estruturar pedidos sólidos perante o INSS e a Justiça Federal.
-            </p>
-
-            {/* Social Proof & Credibility Points */}
-            <div className="space-y-3 pt-2">
-              <div className="flex items-start gap-3 bg-brand-navyDark/60 p-3.5 rounded-xl border border-brand-amber/20">
-                <CheckCircle2 className="size-5 text-brand-amber shrink-0 mt-0.5" />
-                <span className="text-sm text-slate-200">
-                  <strong>Atendimento Direto:</strong> Você fala diretamente com o profissional responsável pela condução do seu caso.
-                </span>
-              </div>
-              <div className="flex items-start gap-3 bg-brand-navyDark/60 p-3.5 rounded-xl border border-brand-amber/20">
-                <CheckCircle2 className="size-5 text-brand-amber shrink-0 mt-0.5" />
-                <span className="text-sm text-slate-200">
-                  <strong>Análise Documental Criteriosa:</strong> Auditoria preventiva de laudos para evitar inconsistências nos órgãos oficiais.
-                </span>
-              </div>
-              <div className="flex items-start gap-3 bg-brand-navyDark/60 p-3.5 rounded-xl border border-brand-amber/20">
-                <CheckCircle2 className="size-5 text-brand-amber shrink-0 mt-0.5" />
-                <span className="text-sm text-slate-200">
-                  <strong>Suporte Transparente:</strong> Comunicação contínua e esclarecimento de cada etapa do processo.
-                </span>
+          {/* Dr. Marcelo Igreja (Homem de Terno Azul) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-brand-navyCard/60 p-6 sm:p-10 rounded-3xl border border-brand-amber/30 shadow-2xl reveal-right">
+            <div className="lg:col-span-5 text-center">
+              <div className="relative inline-block group">
+                <div className="absolute -inset-1.5 bg-gradient-to-tr from-brand-amber via-brand-amberLight to-brand-navyLight rounded-3xl blur-md opacity-40 group-hover:opacity-70 transition duration-500" />
+                <div className="relative rounded-2xl overflow-hidden border-2 border-brand-amber/40 shadow-2xl">
+                  <img
+                    src="/dr-marcelo-igreja.jpg"
+                    alt="Dr. Marcelo Igreja - Advogado Associado e Consultor OAB/CE 57.430"
+                    className="w-full h-[380px] sm:h-[420px] object-cover object-top transform transition duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-brand-navyDark/90 via-brand-navyDark/40 to-transparent p-4 text-center">
+                    <span className="text-brand-amberLight font-bold text-sm block">Dr. Marcelo Igreja</span>
+                    <span className="text-xs text-slate-300">Advogado Associado e Consultor</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="pt-4">
-              <a
-                href="#simulador"
-                className="inline-flex items-center gap-3 bg-gradient-to-r from-brand-amber to-brand-amberDark text-slate-950 font-extrabold px-8 py-4 rounded-xl shadow-xl hover:brightness-110 transition-all text-sm uppercase tracking-wide"
-              >
-                <span>VERIFICAR MEU CASO COM DR. THIAGO</span>
-              </a>
+            <div className="lg:col-span-7 space-y-5 text-left">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-amber/20 text-brand-amberLight text-xs font-bold uppercase tracking-wider">
+                <ShieldCheck className="size-3.5" />
+                Consultoria Especializada
+              </div>
+
+              <div>
+                <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-white">
+                  Dr. Marcelo Igreja
+                </h3>
+                <p className="text-brand-amberLight font-semibold text-sm sm:text-base mt-1">
+                  Advogado Associado e Consultor
+                </p>
+                <div className="inline-block mt-2 bg-brand-amber/20 text-brand-amberLight text-xs font-bold px-3 py-1 rounded-full border border-brand-amber/40">
+                  57430 OAB/CE
+                </div>
+              </div>
+
+              <div className="space-y-4 text-slate-300 text-sm leading-relaxed">
+                <p>
+                  Graduado em Direito, pós-graduado em Direito do Trabalho e pós-graduando em Direito Previdenciário, Dr. Marcelo Igreja é advogado associado e consultor do Thiago Andrade Advocacia.
+                </p>
+                <p>
+                  Atua na orientação e análise de casos relacionados ao BPC/LOAS, com atendimento direcionado a idosos e pessoas com deficiência em situação de vulnerabilidade.
+                </p>
+                <p>
+                  Sua atuação é pautada pelo atendimento humanizado, pela análise individualizada e pela busca responsável dos direitos de cada cliente.
+                </p>
+              </div>
+
+              <div className="pt-2">
+                <a
+                  href="#simulador"
+                  className="inline-flex items-center gap-3 bg-gradient-to-r from-brand-amber to-brand-amberDark text-slate-950 font-extrabold px-8 py-3.5 rounded-xl shadow-xl hover:brightness-110 transition-all text-xs sm:text-sm uppercase tracking-wide"
+                >
+                  <span>VERIFICAR MEU CASO COM A EQUIPE</span>
+                </a>
+              </div>
             </div>
           </div>
 
         </div>
+
       </div>
     </section>
   );
